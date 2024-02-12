@@ -21,4 +21,5 @@ from menu import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.menu_view, name='menu'),
+    path('menu/<int:item_id>/', views.menu_detail, name='menu_detail'),
 ]

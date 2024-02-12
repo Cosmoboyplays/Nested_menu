@@ -1,4 +1,11 @@
 from django.shortcuts import render, HttpResponse
+from menu.models import Item
+
+
+def menu_detail(request, item_id):
+    item = Item.objects.get(id=item_id)
+    # Дополнительная логика для обработки перехода
+    return render(request, 'menu/menu_detail.html', {'item': item})
 
 
 def menu_view(request):
