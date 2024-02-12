@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} Index Page {% endblock %}
+
+{% load draw_menu %}
+
+{% block content %}
+<h2>Это файл index</h2>
+
+{% draw_menu 'main_menu' %}
+
+<h2>Тут закончена отрисовка и это index снова</h2>
+{% endblock %}
